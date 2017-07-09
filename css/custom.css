@@ -1,0 +1,64 @@
+.oneeightfive {
+	width: 185px;
+}
+
+#tablehere {
+	overflow-y: scroll;
+	height: 500px;
+}
+
+.header {
+	margin-top: 5rem;
+}
+
+.listSpace {
+	margin-right: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+th {
+	outline: 0;
+}
+
+thead {
+	background-color: white;
+}
+
+.mismatch {
+	background-color: #f2dede;
+}
+
+#hiddenHead {
+	color: white;
+	border-bottom: none;
+}
+
+#visibleHead {
+	position: fixed;
+	margin-top: -49px;
+	border-bottom: none;
+	background-color: white;
+}
+
+#oneonenine {
+	width: 170px;
+}
+
+#twooneone {
+	width: 146px;
+}
+
+#twosixtwo {
+	width: 169px;
+}
+
+#onethreeeight {
+	width: 203px;
+}
+
+#ninethree {
+	width: 135px;
+}

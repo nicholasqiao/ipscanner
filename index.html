@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>IP Address Scanner</title>
+	<meta name="description" content="IP Address Ping Scanner">
+	<meta name="author" content="Nicholas Qiao">
+
+<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tablesorter.js"></script> 
+	<script type="text/javascript" src="js/parser-network.js"></script>
+	<script type="text/javascript" src="js/sorttable.js"></script>
+
+	
+</head>
+<body>
+
+<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		<section class="header">
+			<h4 class="title">IP Address Scanner</h4>
+		</section>
+		
+		<div class="row">
+			<div class="u-full-width">
+				<label for="sortmethod">Sort By:</label>
+				<form action='' method='' id="sortmethod">
+					<div class="row">
+						<input class="oneeightfive" type="text" placeholder="IP Address" id="ipaddress">
+						<input class="oneeightfive" type="text" placeholder="Location" id="location">
+						<input class="oneeightfive" type="text" placeholder="Hostname" id="hostname">
+						<input class="oneeightfive" type="text" placeholder="Static/DHCP" id="type">
+						<input class="oneeightfive" type="text" placeholder="Pingable" id="state">
+					</div>
+					<button class="button-primary" type="button" id="submit">Submit</button>
+					<button class="button-primary" type="button" id="generateURL">Generate Link</button>
+
+				</form>
+			</div>
+		</div>
+		<p>Note: Red backgrounds in rows mean a Hostname mismatch between Database & DNS</p>
+		<div class="row">
+			<div class ="four columns">
+				<h5 id="itemCount"></h5>
+			</div>
+			<div class ="four columns">
+			<div class="row">
+				<h5 id="staticCount" class="u-pull-left listSpace"></h5>
+				<button class="button-primary hidden" type="button" id="listStatic">Show</button>
+				</div>
+			</div>
+			<div class ="four columns">
+				<h5 id="dhcpCount" class="u-pull-left listSpace"></h5>
+				<button class="button-primary hidden" type="button" id="listDHCP">Show</button>
+			</div>
+		</div>
+
+		<div id="tablehere">
+			<table id='addresstable' class='u-full-width tablesorter'><thead><tr><th>IP Address</th><th>Location</th><th>Hostname</th><th>Static/DHCP</th><th>Pingable</th></tr></thead><tbody></tbody></table>		
+		</div>
+		<div id="lastModified"></div>
+		<script type="text/javascript" src="js/lastmodified.js"></script>
+	</div>
+
+<script type="text/javascript" src="js/jquery.floatThead.js"></script>
+<script type="text/javascript" src="js/populateTable.js"></script>
+<script type="text/javascript" src="js/freeStatic.js"></script>
+<script type="text/javascript" src="js/freeDHCP.js"></script>
+<script type="text/javascript" src="js/generateURL.js"></script>
+<script type="text/javascript" src="js/getURLParameters.js"></script>
+
+
+<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
